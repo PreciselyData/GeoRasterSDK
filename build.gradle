@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+/*
+ * Adding Repositories.
+*/
+repositories {
+    mavenCentral()
+}
+
+/*
+ * Dependencies: Adding RasterSDK Jar as File Dependency.
+*/
+dependencies {
+    implementation fileTree(dir: "lib", includes: ['*.jar'])
+}
+
+tasks.withType(Jar) {
+    from {
+        configurations.compileClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
+    }
+}
