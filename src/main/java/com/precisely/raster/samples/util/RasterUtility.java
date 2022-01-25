@@ -8,7 +8,6 @@ package com.precisely.raster.samples.util;
 
 import com.precisely.raster.common.MapInfoUnitCode;
 import com.precisely.raster.common.RasterFieldBandFilterMode;
-import com.precisely.raster.internal.midev_core.RasterExtent;
 import com.precisely.raster.io.CellValue;
 import com.precisely.raster.io.RandomBand;
 import com.precisely.raster.io.RasterBandInfo;
@@ -297,17 +296,13 @@ public final class RasterUtility {
          * Create the RasterRenderer using the rasterEngine for the given Raster file.
          */
         try (RasterRenderer rasterRenderer = rasterEngine.createRenderer(ABSOLUTE_DATASET)) {
-
-            /*
-             * Create a RasterExtent for the provided area using World Coordinates.
-             */
-            RasterExtent rasterExtent = new RasterExtent(MIN_X, MIN_Y, MAX_X, MAX_Y);
+            double rasterWidth = MAX_X - MIN_Y;
+            double rasterHeight = MAX_Y - MIN_Y;
 
             /*
              * Render the raster using the rasterExtent and Pixel Information.
              */
-            BufferedImage actualImage = rasterRenderer.render(PIXEL_WIDTH, PIXEL_HEIGHT,
-                    rasterExtent.getWidth(), rasterExtent.getHeight(), rasterExtent.getMinX(), rasterExtent.getMinY());
+            BufferedImage actualImage = rasterRenderer.render(PIXEL_WIDTH, PIXEL_HEIGHT, rasterWidth, rasterHeight, MIN_X, MIN_Y);
 
             /*
              * Save the rendered image to the output directory.
