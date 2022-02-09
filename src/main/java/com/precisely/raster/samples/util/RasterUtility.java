@@ -296,7 +296,7 @@ public final class RasterUtility {
          * Create the RasterRenderer using the rasterEngine for the given Raster file.
          */
         try (RasterRenderer rasterRenderer = rasterEngine.createRenderer(ABSOLUTE_DATASET)) {
-            double rasterWidth = MAX_X - MIN_Y;
+            double rasterWidth = MAX_X - MIN_X;
             double rasterHeight = MAX_Y - MIN_Y;
 
             /*
