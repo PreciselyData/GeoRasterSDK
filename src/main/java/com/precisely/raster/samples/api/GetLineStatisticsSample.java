@@ -37,7 +37,7 @@ public final class GetLineStatisticsSample {
     public static void main(String[] args) {
 
         /*
-         * Setting the Environment Variable Required for RasterSDK.
+         * Setting the Environment Variable Required for GeoRasterSDK.
          */
         setEnvironment();
 
