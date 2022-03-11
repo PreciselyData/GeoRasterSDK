@@ -8,7 +8,7 @@ This sample application is using `/data/DC_MRR_CLIP_5M.MRR`, which has one **con
 
 ## Building the sample
 1. Download the Spectrum GeoRasterSDK for Big Data distribution and extract the contents.
-2. Copy the _<extracted_GeoRasterSDK_Zip>/sdk/lib/spectrum-raster-distribution-sdk-&lt;version&gt;.jar_ into the `/lib` directory.
+2. Copy the _<extracted_GeoRasterSDK_Zip>/sdk/lib/geo-raster-sdk-&lt;version&gt;.jar_ into the `/lib` directory.
 3. Depending upon client OS, copy the contents of `/resources/libs/win64` or `/resources/libs/linux64` into the `/resources/nativeLibs` directory.
 4. Run the following command from the root directory to build the project:
     ```
