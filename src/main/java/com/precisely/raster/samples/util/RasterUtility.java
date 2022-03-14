@@ -76,8 +76,8 @@ public final class RasterUtility {
 
     /**
      * JVM Process Isolation flag.
-     * 'false': To run the RasterSDK in the same JVM.
-     * 'true': To run the RasterSDK in a separate JVM.
+     * 'false': To run the GeoRasterSDK in the same JVM.
+     * 'true': To run the GeoRasterSDK in a separate JVM.
      */
     public static final boolean ISOLATED_PROCESS = false;
 
@@ -184,14 +184,14 @@ public final class RasterUtility {
     }
 
     /**
-     * Setting up the environment Path for RasterSDK Libraries.
+     * Setting up the environment Path for GeoRasterSDK Libraries.
      */
     public static void setEnvironment() {
         System.setProperty(NATIVE_LIBS_ENVIRONMENT, NATIVE_LIBS_PATH);
     }
 
     /**
-     * @param isolated: 'true' to run the RasterSDK in separate JVM otherwise 'false' to run in the same JVM.
+     * @param isolated: 'true' to run the GeoRasterSDK in separate JVM otherwise 'false' to run in the same JVM.
      * @return Object of RasterEngine
      */
     public static RasterEngine getRasterEngine(boolean isolated) {
@@ -199,7 +199,7 @@ public final class RasterUtility {
     }
 
     /**
-     * @param isolated: 'true' to run the RasterSDK in separate JVM otherwise 'false' to run in the same JVM.
+     * @param isolated: 'true' to run the GeoRasterSDK in separate JVM otherwise 'false' to run in the same JVM.
      * @return Object of RasterDataset.
      */
     public static RasterDataset getRasterDataset(boolean isolated) {

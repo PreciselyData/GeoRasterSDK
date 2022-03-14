@@ -11,7 +11,7 @@ repositories {
 }
 
 /*
- * Dependencies: Adding RasterSDK Jar as File Dependency.
+ * Dependencies: Adding GeoRasterSDK Jar as File Dependency.
 */
 dependencies {
     implementation fileTree(dir: "lib", includes: ['*.jar'])

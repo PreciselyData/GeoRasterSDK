@@ -42,7 +42,7 @@ public final class GetPolygonStatisticsSample {
         setEnvironment();
 
         /*
-         * Get the RasterDataset using isolated flag as 'false' to run the RasterSDK in the same JVM.
+         * Get the RasterDataset using isolated flag as 'false' to run the GeoRasterSDK in the same JVM.
          */
         RasterDataset rasterDataset = getRasterDataset(ISOLATED_PROCESS);
 
