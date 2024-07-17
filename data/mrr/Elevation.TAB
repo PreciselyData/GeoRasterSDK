@@ -1,0 +1,18 @@
+!table
+!version 300
+!charset WindowsLatin1
+
+Definition Table
+  File "Elevation.mrr"
+  Type "RASTER"
+  (483937.5,5012512.5) (0,0) Label "Pt 1",
+  (522337.5,5012512.5) (512,0) Label "Pt 2",
+  (522337.5,4993312.5) (512,256) Label "Pt 3",
+  (483937.5,4993312.5) (0,256) Label "Pt 4"
+  CoordSys Earth Projection 8, 33, "m", -93, 0, 0.9996, 500000, 0
+  Units "m"
+begin_metadata
+"\IsReadOnly" = "FALSE"
+"\MapInfo" = ""
+"\MapInfo\TableID" = "459c00ca-121c-4b03-a5d6-a5c67d2d6229"
+end_metadata

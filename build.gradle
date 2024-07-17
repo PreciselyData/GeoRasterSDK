@@ -1,7 +1,9 @@
+import org.apache.tools.ant.taskdefs.condition.Os
 plugins {
     id 'java'
     id 'application'
 }
+
 
 /*
  * Adding Repositories.
@@ -9,13 +11,26 @@ plugins {
 repositories {
     mavenCentral()
 }
-
 /*
  * Dependencies: Adding GeoRasterSDK Jar as File Dependency.
 */
 dependencies {
-    implementation fileTree(dir: "lib", includes: ['*.jar'])
+    implementation fileTree(dir: "lib", includes: ['geo-raster-sdk-2.0.1/sdk/lib/geo-raster-sdk-2.0.1-all.jar'])
+    implementation "org.slf4j:slf4j-simple:2.0.7"
+    implementation "org.apache.commons:commons-lang3:3.7"
+
 }
+
+tasks.withType(JavaExec) {
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        systemProperty 'com.precisely.raster.lib.dir', "${projectDir}/lib/geo-raster-sdk-2.0.1/resources/win64/"
+    } else {
+        systemProperty 'com.precisely.raster.lib.dir', "${projectDir}/lib/geo-raster-sdk-2.0.1/resources/linux64"
+        environment 'LD_LIBRARY_PATH', "${projectDir}/lib/geo-raster-sdk-2.0.1/resources/linux64"
+    }
+}
+
+
 
 tasks.withType(Jar) {
     from {

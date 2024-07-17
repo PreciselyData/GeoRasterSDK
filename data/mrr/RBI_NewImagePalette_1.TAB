@@ -1,0 +1,15 @@
+!table
+!version 300
+!charset WindowsLatin1
+
+Definition Table
+  File "RBI_NewImagePalette_1.mrr"
+  Type "RASTER"
+  (1,90) (0,844) Label "Pt 1",
+  (360,90) (718,844) Label "Pt 2",
+  (360,0) (718,1024) Label "Pt 3",
+  (1,0) (0,1024) Label "Pt 4"
+  CoordSys Earth Projection 1, 104
+  Units "degree"
+  RasterStyle 4 1
+  RasterStyle 9 1
